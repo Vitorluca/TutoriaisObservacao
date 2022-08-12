@@ -37,9 +37,9 @@ print(array3)
 
 #o comando np.range não produz listar precisamos usar o comando list() para trasformalo
 
-start = 500 #valor de inicio da sequencia
-stop = 1000
-step = 1.9
+start = 157 #valor de inicio da sequencia
+stop = 645
+step = 2
 
 #usando o comando range do python
 print("\n")
@@ -62,4 +62,97 @@ print(array_arange)
 # apenas com inteiros
 
 
+#usando a função linspace
+#a principal diferença entre a função linspace e as funções arenge e renge é:
+#na linspace temos a seguinte estrutura: (start,stop, number)
+#onde start e o numero que inicia a sequencia, stop define o numero de parada, e number indica
+#a quantidade de pontos que existirão dentro do intervalo estipulado, alterando assim
+#automaticamente o tamanho de cada numero, vejamos:
 
+number = 1000 #numeros de pontos que devem existir no array linspace
+
+array_linspace = pess.linspace(start, stop, number)
+
+print("\n\n\n")
+
+print(array_linspace) #O linspace inclui o numero de stop diferente entre o arange e range
+
+
+#metodos para obter novos arrays e para obtermos informações sobre eles
+
+#array basico 
+array_basico = pess.arange(0,10,1) # start = 2, stop = 200, step = 1.25
+
+print("\n\n")
+
+print(array_basico) #array basico
+
+#dimenções de uma lista em python usamos a função len()
+#dimenções de um array na biblioteca Numy usamos a função .shape
+
+# .shape - indica o tamanho do array, vejamos: 
+
+
+print("\n")
+
+print(array_basico.shape)
+
+#pegado a primeira dimenção de um array
+
+print("\n")
+
+print(array_basico.shape[0]) #pega apenas a primeira dimenção do shape
+
+
+#podemos remodelar um array com a função .reshape
+
+dimencao = [2,5]
+
+array_bidimencional =  array_basico.reshape(dimencao) # Modificando as dimenções do array original
+
+print(array_bidimencional) #o numero de elementos do array original é prezervado
+#mudando apenas sua organização
+
+
+#Operações matematicas com Numpy
+
+#A biblioteca numpy ofereça uma variedade de operações matematicas
+#outra liberdade que ele nos dá é a possibilidade de aplicar essas operações matematicas
+#em numeros (int, float) e em arrays inteiros
+
+#vejamos algums exemplos:
+
+#usando log:
+operacao1 = pess.log10(45.587)
+print("\n")
+print(operacao1)
+
+#fazendo log para arrays:
+operacao1 = pess.log10(array_bidimencional)
+print("\n")
+print(operacao1)
+
+#calculando o cosseno:
+
+operacao2 = pess.cos(25)
+print("\n")
+print(operacao2)
+
+#calculando o cosseno para um array
+
+operacao2 = pess.cos(array_basico)
+print("\n")
+print(operacao2)
+
+
+
+
+
+
+
+
+
+
+
+
+ 
