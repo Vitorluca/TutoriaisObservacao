@@ -70,6 +70,8 @@ plt.plot(x, y5)
 #raw string = string bruto, trata uma barra invertida na string como um caractere normal
 # em vez de tratalo como caractere de escape
 
+plt.show()
+plt.close()
 
 
 
