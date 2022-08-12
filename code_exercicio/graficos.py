@@ -4,6 +4,7 @@
 
 #ela é muito versatil para esse tipo de aplicação
 
+from cProfile import label
 import numpy as np #como chamaremos a biblioteca
 import matplotlib.pyplot as plt #como chamaremos a biblioteca
 
@@ -78,7 +79,64 @@ plt.close()
 #quando existe muitos graficos sore postos
 #porem podemos modificar isso manualmente, vejamos a seguir:
 
-#opções c, cores    -> "r" 
+#opções c: cores    -> "r", "b", "g", "o", "k", etc ou "red", "blue", "cyan", etc
+# opção ls: linestyle  -> "-", "--", "-.", ":", etc
+
+#podemos ainda usar a opção label para defiir um titulo para cada linha, vejamos a seguir algums
+#exemplos
+#para usar o label devemos usar o padrão de escrita do latex para adição de simbolos 
+
+plt.figure(2) #criando uma nova imagem com o idenficador 2
+
+plt.plot(x, y1, c="red", ls="-", label=r"$\cos(x)$") #criando o primeiro grafico
+
+plt.plot(x,y2, c="g", ls="-.", label=r"$\cos(2x)$") # criando o grafico dois
+
+plt.plot(x, y3, c="b", ls="--", label=r"$\cos(\frac{x}{2})$") #criando o grafico três
+
+plt.plot(x, y4,c="cyan", ls=":", label=r"$\cos(2x + \frac{\pi}{3})$") #criando o grafico quatro
+
+plt.plot(x, y5, c="k", ls=":", label=r"$\log10(\frac{1}{x})$") #criando o grafico cinco
+
+#definindo um titulo para nosso grafico, temos:
+plt.title("funções trigonometricas e log")
+
+#definindo titulo para eixos 
+plt.xlabel("x") #titulo para o eixo X
+plt.ylabel("f(y)") # titulo para o eixo Y
+
+
+#comando para aparecer a caixa de legenda na figura
+plt.legend(loc="best") #definimos a posição da legenda com o argumento loc
+
+plt.show() #mostrando o grafico que foi feito
+
+plt.close() #libera o espaço de memoria que armazena as figura
+
+
+# Funções adicionais da biblioteca matplotlib
+
+#plt.scatter() -> faz o plot sem ligar os pontos 
+#plt.hist() -> FAz um histograma
+#plt.imshow / plt.pcolormesh -> plota imagens em 2D
+
+
+
+# Com o matplotlib podemos ainda criar graficos 3D e graficos dinamicos
+
+#usando as funções scatter e hist
+
+plt.figure(3) #criando nova figura
+
+plt.scatter(x, y1) #criar um grafico sem ligar os pontos
+
+plt.hist(x, bins=[0,25,30,60,70]) # criar um hisotgrama (bins, largura da barra )
+
+plt.show()
+plt.close()
+
+#verificar depois a função plt.hist() não aprendi a usar corretamente
+
 
 
 

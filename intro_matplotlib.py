@@ -72,7 +72,7 @@ plt.close()
 # do tracejado das linhas (linestyle), dentre diversas outras opções.
 # Consulte a documentação do Matplotlib para ver mais exemplos e opções.
 # Opção c:  cores 		-> "r", "b", "g", "o", "k", etc ou "red", "blue", "cyan", etc
-# Opção ls: linestyle	-> "-", "--", "-.", ":", etc
+# Opção ls: linestyle	   
 # Além disso, podemos colocar uma legenda que explica cada um dos plots com a
 # opção label.
 plt.figure(2)
