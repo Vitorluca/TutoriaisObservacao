@@ -74,7 +74,11 @@ plt.show()
 plt.close()
 
 
+# por padrão do matplotlib define autmomaticamnte as cores das linhas de cada grafico
+#quando existe muitos graficos sore postos
+#porem podemos modificar isso manualmente, vejamos a seguir:
 
+#opções c, cores    -> "r" 
 
 
 
