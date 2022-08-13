@@ -31,7 +31,7 @@ print("FK5:")
 print(obj1.transform_to("fk5"))
 
 
-obj2_name = "PSR J1012+5307"
+obj2_name = ""
 print("\nSelecionando objetos por nome. Objeto {}".format(obj2_name))
 obj2 = SkyCoord.from_name(obj2_name)
 print(obj2)
